@@ -1,3 +1,7 @@
+@Joeri, ben hier een uurtje mee bezig geweest. Docker image toegevoegd zodat ik lokaal kon ontwikkelen. Een simpele test gefixed. Wat code style aangepast, en kleine refactor van de class.
+
+----
+
 # GildedRose Kata - PHP Version
 
 See the [top level readme](../README.md) for general information about this exercise. This is the PHP version of the

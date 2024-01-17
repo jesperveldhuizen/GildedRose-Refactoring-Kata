@@ -18,7 +18,7 @@ final class GildedRose
     {
         foreach ($this->items as $item) {
             if ($item->name !== 'Aged Brie' && $item->name !== 'Backstage passes to a TAFKAL80ETC concert') {
-                if (($item->quality > 0) && $item->name !== 'Sulfuras, Hand of Ragnaros') {
+                if ($item->quality > 0 && $item->name !== 'Sulfuras, Hand of Ragnaros') {
                     --$item->quality;
                 }
             } elseif ($item->quality < 50) {
