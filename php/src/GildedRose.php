@@ -40,17 +40,19 @@ final class GildedRose
             }
 
             if ($item->sellIn < 0) {
-                if ($item->name !== 'Aged Brie') {
-                    if ($item->name !== 'Backstage passes to a TAFKAL80ETC concert') {
-                        if (($item->quality > 0) && $item->name !== 'Sulfuras, Hand of Ragnaros') {
-                            --$item->quality;
-                        }
-                    } else {
-                        $item->quality -= $item->quality;
+                return;
+            }
+
+            if ($item->name !== 'Aged Brie') {
+                if ($item->name !== 'Backstage passes to a TAFKAL80ETC concert') {
+                    if (($item->quality > 0) && $item->name !== 'Sulfuras, Hand of Ragnaros') {
+                        --$item->quality;
                     }
-                } elseif ($item->quality < 50) {
-                    ++$item->quality;
+                } else {
+                    $item->quality -= $item->quality;
                 }
+            } elseif ($item->quality < 50) {
+                ++$item->quality;
             }
         }
     }
