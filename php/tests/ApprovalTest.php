@@ -11,7 +11,7 @@ use ApprovalTests\Approvals;
 
 /**
  * This unit test uses [Approvals](https://github.com/approvals/ApprovalTests.php).
- * 
+ *
  * There are two test cases here with different styles:
  * <li>"foo" is more similar to the unit test from the 'Java' version
  * <li>"thirtyDays" is more similar to the TextTest from the 'Java' version
@@ -24,6 +24,7 @@ class ApprovalTest extends TestCase
 	public function testFoo(): void
     {
         $items = [new Item('foo', 0, 0)];
+        
         $app = new GildedRose($items);
         $app->updateQuality();
 
@@ -36,7 +37,7 @@ class ApprovalTest extends TestCase
 
         $argv = ["", "30"];
         include(__DIR__.'/../fixtures/texttest_fixture.php');
-        
+
         $output = ob_get_clean();
 
         Approvals::approveString($output);

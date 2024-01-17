@@ -25,11 +25,11 @@ final class GildedRose
                 ++$item->quality;
 
                 if ($item->name === 'Backstage passes to a TAFKAL80ETC concert') {
-                    if (($item->sellIn < 11) && $item->quality < 50) {
+                    if ($item->sellIn < 11 && $item->quality < 50) {
                         ++$item->quality;
                     }
 
-                    if (($item->sellIn < 6) && $item->quality < 50) {
+                    if ($item->sellIn < 6 && $item->quality < 50) {
                         ++$item->quality;
                     }
                 }
@@ -45,7 +45,7 @@ final class GildedRose
 
             if ($item->name !== 'Aged Brie') {
                 if ($item->name !== 'Backstage passes to a TAFKAL80ETC concert') {
-                    if (($item->quality > 0) && $item->name !== 'Sulfuras, Hand of Ragnaros') {
+                    if ($item->quality > 0 && $item->name !== 'Sulfuras, Hand of Ragnaros') {
                         --$item->quality;
                     }
                 } else {
